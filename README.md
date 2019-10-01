@@ -1,2 +1,2 @@
-# warships-battle
+# Warships Battle
 Mobile Game with NativeScript 
