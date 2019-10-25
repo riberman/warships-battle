@@ -1,20 +1,13 @@
 <template>
     <Page class="page">
-        <ActionBar class="action-bar">
-            <Label class="action-bar-title" text="WarshipsBattle"></Label>
+      <ActionBar title="SideDrawer Button">
+          <android>
+            <NavigationButton icon="res://ic_menu" tap="showSideDrawer" />
+          </android>
+          <ios>
+            <ActionItem icon="res://ic_menu" tap="showSideDrawer" />
+          </ios>
         </ActionBar>
-
-        <ScrollView>
-            <StackLayout class="home-panel">
-            <Label class="info" horizontalAlignment="center" verticalAlignment="center">
-                <FormattedString>
-                    <Span class="fa" text.decode="&#xf135; "/>
-                    <Span :text="message"/>
-                </FormattedString>
-            </Label>
-            <Button text="Entrar" @tap="onButtonTap" />
-          </StackLayout>
-          </ScrollView>
     </Page>
 </template>
 
@@ -40,5 +33,10 @@
 
     .info {
         font-size: 20;
+    }
+
+    .action-bar {
+        text-align: left;
+        background-color: #34495e;
     }
 </style>
