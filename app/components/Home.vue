@@ -1,24 +1,26 @@
 <template>
     <Page class="page">
-      <ActionBar title="SideDrawer Button">
-          <android>
-            <NavigationButton icon="res://ic_menu" tap="showSideDrawer" />
-          </android>
-          <ios>
-            <ActionItem icon="res://ic_menu" tap="showSideDrawer" />
-          </ios>
-        </ActionBar>
+      <ActionBar title="Master" />
+        <StackLayout>
+          <Button text="To Details directly" @tap="goToLogin" />
+        </StackLayout>
     </Page>
 </template>
 
 <script>
-    export default {
-        computed: {
-            message() {
-                return "Blank {N}-Vue app";
-            }
-        }
+import Login from './Login';
+
+export default {
+data () {
+    return {
     };
+},
+methods: {
+    goToLogin() {
+        this.$navigateTo(Login)
+    }
+}
+}
 </script>
 
 <style scoped lang="scss">
